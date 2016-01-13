@@ -1,5 +1,5 @@
 #BlackBoard Course Search Extended
-Chromse extension that adds batch functionality to Course Search Results page within BlackBoard
+Chrome extension that adds batch functionality to Course Search Results page within BlackBoard
 
 ### Features
 

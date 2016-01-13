@@ -5,13 +5,13 @@ $(document).ready(function() {
 
 
 
-
+		//Depending on how you arrived at the course results page, the document we are trying to modify MAY be in an iframe.
 		var innerDoc = document;
 		var iframe = document.getElementById('contentFrame');
 		if (iframe)
-		 	innerDoc= iframe.contentDocument || iframe.contentWindow.document; //Depending on how you arrived at the course results page, the document we are trying to modify MAY be in an iframe.
+		 	innerDoc= iframe.contentDocument || iframe.contentWindow.document; 
 
-
+		 //To append to generated URLs used in callbacks
 		var bbURL = 'https://cupo.blackboard.com';
 
 		function createNav(title,callback) {
@@ -27,18 +27,18 @@ $(document).ready(function() {
 		}
 
 		function getCIDs() {
-			var stuff = innerDoc.getElementsByTagName('a');
+			var a_tags = innerDoc.getElementsByTagName('a');
 			var URLs = [];
-			for (var i = 0; i < stuff.length; i++) { 
-				var href = stuff[i].getAttribute('href');
+			for (var i = 0; i < a_tags.length; i++) { 
+				var href = a_tags[i].getAttribute('href');
 				if (href) {
 					if (href.indexOf("courseMain?course_id") > -1) {
 					
-						if (stuff[i].parentNode.parentNode.children[0].children[0].checked) {
-							console.log(stuff[i]);
+						if (a_tags[i].parentNode.parentNode.children[0].children[0].checked) {
+							console.log(a_tags[i]);
 							var split = href.split('_');
 							var cid = '_' + split[2] + '_' + split[3];
-							var crn = stuff[i].innerHTML;
+							var crn = a_tags[i].innerHTML;
 							URLs.push([href,cid,crn]);
 						}
 					}
