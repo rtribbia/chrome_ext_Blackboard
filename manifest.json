@@ -1,0 +1,14 @@
+{
+  "name": "Blackboard Course Search Extended",
+  "version": "0.1.1",
+  "manifest_version": 2,
+  "description": "Adds features to the Blackboard Course Search results page on cupo.blackboard.com domain",
+  "content_scripts": [
+    {
+      "matches": ["https://cupo.blackboard.com/*"],
+      "all_frames": true,
+      "css": ["basic.css"],
+      "js": ["jquery.min.js", "contentscript.js"]
+    }
+  ]
+}
