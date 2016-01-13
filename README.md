@@ -12,8 +12,8 @@ Pages will load in new tabs for all selected course rooms:
 3. **View Enrollments** of courseroom(s).
 4. Go to **Date Management** page for courseroom(s).
 5. Go to **Content Collection** page for courseroom(s).
-6. Go to **File Upload** page for page for courseroom(s).
-7. Go to **Download Gradecenter** page for page for courseroom(s).
+6. Go to **File Upload** page for courseroom(s).
+7. Go to **Download Gradecenter** page for courseroom(s).
 
 ### Libraries & Frameworks Used
 1. [jQuery  1.11.2](https://jquery.org/)
